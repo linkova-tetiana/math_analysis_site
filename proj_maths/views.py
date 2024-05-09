@@ -6,6 +6,8 @@ from . import terms_work
 def index(request):
     return render(request, "index.html")
 
+def questions(request):
+    return render(request, "questions.html")
 
 def terms_list(request):
     terms = terms_work.get_terms_for_table()

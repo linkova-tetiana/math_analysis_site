@@ -1,162 +1,59 @@
 {% extends "base_page.html" %}
 
 {% block page-title %}
-Введение в математический анализ
+Варианты дополнительных вопросов
 {% endblock %}
-
+<!--
 {% block page-lead %}
-Сайт в помощь студентам 1 курса МФТИ, изучающим базовый курс математического анализа. <br/>
-Здесь вы найдете:
-<nav>
-<ul>
-    <li><a href="index.html"> Программу к коллоквиуму</a></li>
-    <li><a href="index.html"> Информацию по билетам</a></li>
-    <li><a href="index.html"> Тест для самопроверки</a></li>
-    <li><a href="index.html"> Раздел для вопросов преподавателю</a></li>
-</ul>
-</nav>
 
 {% endblock %}
-
+-->
 {% block content %}
-<div class="container px-1 py-5" id="project-contents">
-    <h2 class="pb-2 border-bottom">Желаем вам успешной подготовки и отличных оценок!</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-4">
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Материалы для подготовки</h3>
-                <p>В этом разделе можно найти вопросы к коллоквиуму, ссылки на литературу, список возможных доплнительных вопросов на сдаче и другие материалы.</p>
-                <a href="/terms-list" class="btn btn-primary">Изучить</a>
-            </div>
-        </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Тест</h3>
-                <p>Для проверки и закрепления выученного материала можно использовать этот тест, который соответствует программе билетов.</p>
-                <a href="/add-term" class="btn btn-primary">
-                    Пройти
-                </a>
-            </div>
-        </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Результаты теста</h3>
-                <p>Для самопроверки доступны результаты и ответы к вопросам теста</p>
-                <a href="/stats" class="btn btn-primary">
-                    Просмотреть
-                </a>
-            </div>
-        </div>
-        <div class="col d-flex">
-            <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
-                <svg class="bi" width="1em" height="1em">
-                    <use xlink:href="#cpu-fill"></use>
-                </svg>
-            </div>
-            <div>
-                <h3 class="fs-2">Вопросы</h3>
-                <p>Если при подготовке у вас возникли сложности вы можете оставить свой вопрос на сайте и преподаватель ответит на него.</p>
-                <a href="/stats" class="btn btn-primary">
-                    Задать
-                </a>
-            </div>
-        </div>
-    </div>
-
-
-    <h2 class="pb-2 border-bottom">Как проходит коллоквиум?</h2>
-    <div class="container">
-        <p> <span class="fst-italic">Коллоквиум</span> - традиционное испытание на 1 курсе. Оно проводится со времен основания института.
-            Обычно коллоквиум проходит в октябре. Он необходим для иллюстрации процедуры экзамена на зимней сессии.
-            Часто у первокурсников помимо трудностей с освоением программы возникает еще и множество формальных вопросов
-            о процедуре коллоквиума. Ответы на них собраны ниже на этой странице.
-        </p>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Кто принимает?</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>
-                В большинстве случаев коллоквиум принимает ваш семинарист. Возможны другие семинаристы вашего потока.
-            </p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Где проходит?</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>
-                В небольшой семинарской аудитории, возможно во время вашего семинара в расписании.
-            </p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Как происходит общение с преподавателем?</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>
-                После 40 минут подготовки вас уже может взять преподаватель. Сначала он будет смотреть
-                на доказательство билета и задавать вопросы на понимание по ходу беседы. Если этот этап пройден
-                успешно, далее последуют вопросы на уровне определений или базовые задачи из курса. Определения
-                не ограничиваются темой вашего билета и могут быть из всей программы. Примеры задач для дополнительных
-                вопросов можно посмотреть по <a href="index.html">ссылке</a>.
-            </p>
-        </div>
-    </div>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
-        <div class="col-lg-4">
-            <h4 class="py-1">Сколько длится?</h4>
-        </div>
-        <div class="col-lg-8">
-            <p>
-                Время очень будет зависеть от принимающего, обычно оно не меньше получаса, в исключительных случаях
-                может достигать даже 6 часов.
-            </p>
-        </div>
-    </div>
-</div>
-<h2 class="pb-2 border-bottom">Еще немного лайфхаков</h2>
 <div class="container">
-    <nav>
-        <ul>
-            <li> Для тренировки студенты старших курсов организовывают "предколлок", где можно потренироваться
-            в общении по билету, попробовать свои силы. Старшекурсники также помогают разобраться в непонятных темах.
-                <p>
-                Информация о встречах публикуется в группах ВК.
-                </p>
-            </li>
-            <li>
-                Желающие пощекотать нервы и составить впечатление о принимающих заранее могут почитать отзывы о
-                преподавателях на известном всем физтехам <a href="https://wiki.mipt.tech/index.php/%D0%97%D0%B0%D0%B3%D0%BB%D0%B0%D0%B2%D0%BD%D0%B0%D1%8F_%D1%81%D1%82%D1%80%D0%B0%D0%BD%D0%B8%D1%86%D0%B0">
-                викимипте.</a>
-                <p>
-                Стоит сказать, что действительно полезные советы там будет сложно найти, но общая оценка обычно
-                    соответствует действительности.
-                </p>
 
+        <ol type="1">
+            <li> Задание
+                <p>
+                Могут спросить типовые задачи из вашего <a href="https://old.mipt.ru/education/chair/mathematics/process/zima/progs23.php">
+                задания</a>.
+                </p>
             </li>
-        </ul>
-    </nav>
+            <li> Примеры из лекций
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWEr0uO1NZu-jUdx06NF6PO3A">
+                        Лекции Иванова</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWErnSpIish59VJyC5lSKnKMp">
+                        Лекции Тюленева</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWEqUgni0Yqmj8Q-P8coWGCIB">
+                        Лекции Голубева</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLocvKxfon41UMdduSk5yx--JjZWZG7yfc">
+                        Лекции Петровича</a></li>
+                </ul>
+            </li>
+             <li> Контрпримеры
+                <p>
+                В темах на сходимость много типовых задач на связь непрерывности и сходимости, на них обязательно
+                    нужно знать ответы. Обратите внимание на эти теоремы в лекциях.
+                </p>
+                <ul>
+                    <li><a href="https://www.youtube.com/watch?v=hTeQYFJ189c">
+                        Примеры задач</a></li>
+                    <li><a href="https://www.youtube.com/watch?v=6w2kMeKSXp4&list=PLthfp5exSWEpNdsBN_z-WJbW4IYcJo8rG">
+                        Разбор на семинарах</a></li>
+                </ul>
+             </li>
+             <li> Методички от студентов студентам
+                <ul>
+                    <li><a href="https://vk.com/t_p_phystech">
+                        ТПФ</a></li>
+                    <li><a href="https://vk.com/tupoy_skat">
+                        Тупой скат</a></li>
+                </ul>
+            </li>
+        </ol>
+
     <p style="text-align: center;">
-  	<img src="static/vse_ok.jpg" alt="Все получится!">
+  	<img src="static/need_to_know.jpg" alt="Это нужно знать" width="500" height="450">
     </p>
 </div>
 {% endblock %}
