@@ -1,29 +1,31 @@
 {% extends "base_page.html" %}
-
 {% block page-title %}
-{% if success %}
-Термин добавлен
-{% else %}
-Ошибка добавления
-{% endif %}
+Вопросы преподавателю
 {% endblock %}
 
-{% block page-lead %}{% endblock %}
+{% block page-lead %}
+В этом разделе вы можете задать вопрос на тему, которую не получается разобрать самостоятельно. Вопрос будет
+перенаправлен преподавателю, и будет разобран на личной консультации.
+{% endblock %}
+
 
 {% block content %}
 <div class="container-sm px-5 py-5" id="term-form-result">
+    <h2 class="pb-2 border-bottom">
+        {% if success %}
+        Вопрос принят
+        {% else %}
+        Ошибка добавления
+        {% endif %}
+    </h2>
     <h2 class="pb-2 border-bottom">Результат запроса</h2>
     <p>Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
         Ваш запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
     </p>
 
-    <h2 class="pb-2 border-bottom">Комментарий</h2>
-    <p>{{ comment }}</p>
-
-    <h2 class="pb-2 border-bottom">Что можно сделать?</h2>
-    <ul>
-        <li>заполнить <a href="/add-term">форму</a> ещё раз,</li>
-        <li>вернуться на <a href="/">главную</a></li>
-    </ul>
+    <h2 class="pb-2 border-bottom">Вы можете задать <a href="/add-term">вопрос</a> ещё раз</h2>
+    <p style="text-align: center;">
+  	<img src="static/vopros.jpg" alt="Кот, который не понял">
+    </p>
 </div>
 {% endblock %}
