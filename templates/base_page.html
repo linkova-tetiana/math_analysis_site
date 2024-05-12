@@ -3,38 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>{% block pagetitle %}{% endblock %}</title>
     <!-- load static -->
     {% load static %}
     <!-- CSS -->
-    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'semantic.min.css' %}" rel="stylesheet">
     <link href="{% static 'favicon.ico' %}" rel="icon" type="image/x-icon">
-    <meta property="og:title" content="Заголовок страницы в OG">
-    <meta property="og:description" content="Описание страницы в OG">
-    <!--<meta property="og:image" content="https://example.com/image.jpg"> -->
-    <meta property="og:url" content="https://example.com/">
 </head>
 <body>
 <main>
-    <div class="container">
-        <header class="border-bottom">
-            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                <div class="fs-2 mb-3">
-                    <img src="{% static 'integral.svg' %}" alt="Интеграл" width="25" height="32"/>
+
+
+        <header class="ui inverted pink center aligned vertical segment">
+            <a href="/">
+                <div class="ui huge header">
+
+                    <img src="{% static 'integral.svg' %}" alt="Интеграл" width="30" height="60"/>
                     <span>Образовательный проект по подготовке к коллоквиуму</span>
-                    <img src="{% static 'limit.png' %}" alt="Предел" width="290" height="42"/>
                 </div>
             </a>
         </header>
-        <div class="p-4 mb-4 bg-light rounded-3" id="title-box">
-            <div class="container-fluid py-5">
-                <h1 class="display-4 fw-bold">{% block page-title %}{% endblock %}</h1>
-                <p class="col-md-12 fs-3">{% block page-lead %}{% endblock %}</p>
+<div class = "ui segment">
+        <div class="ui raised segment" id="title-box">
+            <div class="content">
+                <!--<img src="{% static 'limit.png' %}" alt="Предел" width="350" height="50" align="right" /> -->
+                <h1 class="ui huge header">{% block page-title %}{% endblock %}</h1>
+                <p class="content">{% block page-lead %}{% endblock %}</p>
             </div>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footer pt-3 mt-4 text-muted border-top">© 2023</footer>
+        <footer class="footer pt-3 mt-4 text-muted border-top">© MIPT 2023</footer>
     </div>
 </main>
 </body>
