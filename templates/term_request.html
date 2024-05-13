@@ -10,22 +10,27 @@
 
 
 {% block content %}
-<div class="container-sm px-5 py-5" id="term-form-result">
-    <h2 class="pb-2 border-bottom">
-        {% if success %}
+{% if success %}
+<div class="ui raised inverted green center aligned very padded text container segment">
+  <h2 class="pb-2 border-bottom">
         Вопрос принят
-        {% else %}
-        Ошибка добавления
-        {% endif %}
-    </h2>
+  </h2>
     <h2 class="pb-2 border-bottom">Результат запроса</h2>
     <p>Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
-        Ваш запрос завершился <span class="fw-bold">{% if success %}успешно{% else %}ошибкой{% endif %}</span>.
+        Ваш запрос завершился <span class="fw-bold">успешно</span>.
     </p>
-
     <h2 class="pb-2 border-bottom">Вы можете задать <a href="/add-term">вопрос</a> ещё раз</h2>
-    <p style="text-align: center;">
-  	<img src="static/vopros.jpg" alt="Кот, который не понял">
-    </p>
 </div>
+{% else %}
+<div class="ui raised inverted red center aligned very padded text container segment">
+  <h2 class="pb-2 border-bottom">
+        Ошибка добавления
+  </h2>
+    <h2 class="pb-2 border-bottom">Результат запроса</h2>
+    <p>Уважаемый пользователь <span class="fst-italic">{{ user }}</span>,<br/>
+        Ваш запрос завершился <span class="fw-bold">ошибкой</span>.
+    </p>
+    <h2 class="pb-2 border-bottom">Попробуйте задать <a href="/add-term">вопрос</a> ещё раз</h2>
+</div>
+{% endif %}
 {% endblock %}
