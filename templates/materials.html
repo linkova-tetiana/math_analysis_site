@@ -1,0 +1,62 @@
+{% extends "base_page.html" %}
+
+{% block page-title %}
+Материалы для подготовки
+{% endblock %}
+
+{% block page-lead %}
+{% endblock %}
+
+{% block content %}
+<div class="ui inverted center aligned raised segment">
+  <h1 class="ui pink inverted huge header">Программа</h1>
+</div>
+<div class="ui raised center aligned segment">
+<object
+  class="pdf_example"
+  type="application/pdf"
+  data="static/program.pdf"
+  width="800"
+  height="800"
+>
+  <a href="static/program.pdf">Программа к коллоквиуму</a>
+</object>
+</div>
+
+<div class="ui inverted center aligned raised segment">
+  <h1 class="ui pink inverted huge header">Другие материалы</h1>
+</div>
+
+<div class="ui segment">
+
+        <ol type="1">
+            <li> Задание
+                <p>
+                Решение типовых задач поможет вам подготовиться. Ссылка на задачи есть на сайте <a href="https://old.mipt.ru/education/chair/mathematics/process/zima/progs23.php">
+                кафедры</a>.
+                </p>
+            </li>
+            <li> Лекции разных потоков
+                <ul>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWEr0uO1NZu-jUdx06NF6PO3A">
+                        Поток Иванова</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWErnSpIish59VJyC5lSKnKMp">
+                        Поток Тюленева</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLthfp5exSWEqUgni0Yqmj8Q-P8coWGCIB">
+                        Поток Голубева</a></li>
+                    <li><a href="https://www.youtube.com/playlist?list=PLocvKxfon41UMdduSk5yx--JjZWZG7yfc">
+                        Поток Петровича</a></li>
+                </ul>
+             <li> Методички от студентов студентам
+                <ul>
+                    <li><a href="https://vk.com/t_p_phystech">
+                        ТПФ</a></li>
+                    <li><a href="https://vk.com/tupoy_skat">
+                        Тупой скат</a></li>
+                </ul>
+            </li>
+        </ol>
+</div>
+{% endblock %}
+
+

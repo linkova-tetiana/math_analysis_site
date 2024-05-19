@@ -5,7 +5,6 @@
 {% endblock %}
 
 {% block page-lead %}
-
 <div class="ui horizontal segments">
   <div class="ui center aligned segment">
     <p>
@@ -14,15 +13,16 @@
     </p>
 
     <div class="ui vertical buttons">
-      <a href="/add-term"><button class="ui button"> Программу к коллоквиуму</button></a>
-      <a href="/add-term"><button class="ui button"> Информацию по билетам</button></a>
-      <a href="/add-term"><button class="ui button"> Тест для самопроверки</button></a>
-      <a href="index.html"><button class="ui button"> Раздел для вопросов преподавателю</button></a>
+      <a href="/materials"><button class="ui button"> Программу к коллоквиуму</button></a>
+      <a href="/materials"><button class="ui button"> Информацию по билетам</button></a>
+      <a href="/test"><button class="ui button"> Тест для самопроверки</button></a>
+      <a href="/add-term"><button class="ui button"> Раздел для вопросов преподавателю</button></a>
+        <a href="/questions"><button class="ui button"> Примеры дополнительных вопросов</button></a>
     </div>
   </div>
   <div class="ui center aligned segment">
     <p>
-        <img src="/static/putana.jpg" alt="Предел" width="340" height="220" align="center" />
+        <img src="/static/putana.jpg" alt="Предел" width="340" height="230" align="center" />
     </p>
   </div>
 </div>
@@ -44,7 +44,7 @@
             ссылки на литературу, список возможных доплнительных вопросов на сдаче и другие материалы.
         </div>
       </div>
-        <a href="/add-term">
+        <a href="/materials">
             <div class="ui inverted segment">
                 <button class="fluid ui bottom attached inverted pink button">Изучить</button>
             </div>
@@ -64,7 +64,7 @@
             который соответствует программе билетов.
         </div>
       </div>
-        <a href="/add-term">
+        <a href="/test">
             <div class="ui inverted segment">
                 <button class="fluid ui bottom attached inverted pink button">Пройти</button>
             </div>
@@ -82,7 +82,7 @@
         Для самопроверки доступны результаты и ответы к вопросам теста.
         </div>
       </div>
-        <a href="/add-term">
+        <a href="/test-result">
             <div class="ui inverted segment">
                 <button class="fluid ui bottom attached inverted pink button">Просмотреть</button>
             </div>
