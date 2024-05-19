@@ -1,0 +1,39 @@
+{% extends "base_page.html" %}
+{% block page-title %}
+Результаты теста
+{% endblock %}
+
+{% block page-lead %}
+На этой странице доступны результаты последнего прохождения теста.
+{% endblock %}
+
+
+{% block content %}
+<div class="ui segment" id="results-table">
+    <div class="table-responsive">
+        <table class="ui celled table">
+          <thead>
+            <tr>
+              <th scope="col" class="py-3">Номер вопроса</th>
+              <th scope="col" class="py-3">Ваш ответ</th>
+              <th scope="col" class="py-3">Правильный ответ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cnt, letter, true_result, color in test_results %}
+            <tr>
+                <td >{{ cnt }}</td>
+                <td {% if color %} class="positive" {% else %} class="negative" {% endif %}>{{ letter }}</td>
+                <td class="py-3">{{ true_result }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+</div>
+<a href="/test">
+        <div class="ui violet fluid button" tabindex="0">
+            <h3>Пройти тест заново</h3>
+        </div>
+</a>
+{% endblock %}

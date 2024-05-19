@@ -20,9 +20,12 @@ from . import views
 urlpatterns = [
     path('', views.index),
     path('add-term', views.add_term),
+    path('materials', views.materials),
     path('send-term', views.send_term),
+    path('send-test', views.send_test),
+    path('test', views.test),
+    path('test-result', views.test_result),
     path('send-anon', views.send_term_anon),
     path('anon', views.add_term_anon),
     path('questions', views.questions)
-    #path('stats', views.show_stats)
 ]
